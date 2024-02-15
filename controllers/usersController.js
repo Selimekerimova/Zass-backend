@@ -1,5 +1,6 @@
 const Users = require("../models/usersModel");
 
+
 const singUp = async (req, res) => {
   const { username, email, password, password2 } = req.body;
   if (!username || !email || !password || !password2) {

@@ -1,4 +1,4 @@
-const Team = require("../models/productsModel");
+const Team = require("../models/teamModel");
 
 const getAllTaem = async (req, res) => {
   try {
