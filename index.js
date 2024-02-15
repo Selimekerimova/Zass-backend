@@ -4,6 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const productRouter = require("./routes/productRoute");
 const usersRouter = require("./routes/usersRoute");
+const teamRouter = require("./routes/teamRoute");
 require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use("/products", productRouter);
+app.use("/team", teamRouter);
 app.use("/", usersRouter);
 mongoose
   .connect(DB)
