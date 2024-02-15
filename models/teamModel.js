@@ -3,8 +3,8 @@ const { Schema } = mongoose;
 
 const teamScheam = new Schema(
     {
-      img: { type: String, required: true },
       fullname: { type: String, required: true },
+      img: { type: String, required: true },
      
     },
     { timestamps: true }
